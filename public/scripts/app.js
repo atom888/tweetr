@@ -55,7 +55,11 @@ $(document).ready(function() {
     }
   ];
 
-
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 function renderTweets(tweets) {
   var container = $('#tweet-container').html('');
@@ -80,14 +84,14 @@ function createTweetElement (tweet) {
   var presentDate = $.now();
   var newDate = new Date(epoch);
 
-  tweet = $(`
-      <article>
+  tweet =
+  $(`<article>
           <header>
             <img src=${avatars} class="avatar">
             <p class="name">${name}</p>
             <div class="sig">${handle}</div>
           </header>
-          <p class="content">${content}</p>
+          <p class="content">${escape(content)}</p>
           <footer>
             <p class="date">${newDate}
               <i class="fa fa-flag" aria-hidden="true"></i>
