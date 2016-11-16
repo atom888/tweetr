@@ -3,16 +3,16 @@ main.container {
 }
 
  section.new-tweet {
-  background-color: #cecec3;
-  border: solid 2px;
+  background-color: #ededed;
+  border: solid 1px #cecece;
   border-radius: 10px;
   /*margin: 0px 20px;*/
   padding: 0 10px;
 }
 
 section h2 {
-  color: #00a087;
-  border-bottom: 1px solid black;
+  color: #234551;
+  border-bottom: 1px solid #cecece;
 }
 
 section textarea {

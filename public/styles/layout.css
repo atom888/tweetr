@@ -17,9 +17,10 @@ html {
 body {
   margin: 0;
   /*color: #E6DEDC;*/
-  background-color: #cecec3;
+  background-color: #ededed;
   font-family: 'Roboto Condensed', sans-serif;
 }
+
 
 
 main {
@@ -31,9 +32,94 @@ main {
   width: 450px;
 }
 
-/*main.container {
-  padding: 2em 2em;
+#tweet-container {
+  background-color: #f3f3f3;
+  border: solid 1px #cecece;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#tweet-container article {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #647e84;
+  opacity: 0.7;
+}
+
+#tweet-container article:hover  {
+  opacity: 1;
+}
+#tweet-container article:hover footer i  {
+  opacity: 1;
+}
+
+#tweet-container article p {
+  margin-left: 10px;
+  padding: 20px 0px;
+}
+
+
+#tweet-container header {
+  background-color: #f3f3f3;
+  border-radius: 9px 9px 0px 0px;
+  color: #647e84;
+  height: 70px;
+}
+
+#tweet-container header img {
+  background-color: transparent;
+  height: 50px;
+  margin: 5px 5px;
+  width: 50px;
+
+}
+
+#tweet-container header p {
+  display: inline-block;
+  font-size: 1.4em;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-top: 6px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  position: absolute;
+
+}
+
+#tweet-container header .sig {
+  display: inline-block;
+  float: right;
+  font-weight: 100;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+
+#tweet-container footer {
+  background-color: transparent;
+  border-top: 1px solid #cecece;
+  color: #647e84;
+  font-weight: 100;
+}
+
+#tweet-container footer p {
+  font-size: 0.6em;
+  margin: 0px 10px;
+  padding: 5px 0px;
+
+}
+
+#tweet-container footer i {
+  color: #58c6b8;
+  float: right;
+  margin:0px 5px;
+  opacity: 0;
+}
+
+/*#tweet-container footer i:hover {
+  opacity: 1;
 }*/
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
