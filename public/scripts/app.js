@@ -60,6 +60,20 @@ function createTweetElement (tweet) {
 $('form[action="/tweets/"]').on('submit', function (event) { //event listener - takes in an event
   event.preventDefault();
   var tweetInput = $(this);
+  var tweetLength = tweetInput.find("#content_txt").val().length;
+  var maxTweetLength = 140;
+
+  console.log("tweetLength", tweetLength);
+
+  if (tweetLength === 0) {
+    alert("Please enter a tweet before submitting.");
+    return false;
+  }
+  if (tweetLength >= maxTweetLength) {
+    alert("Tweet is too long!");
+    // event.preventDefault();
+    return false;
+  }
 
   $.ajax({
     method: 'post',
@@ -68,6 +82,13 @@ $('form[action="/tweets/"]').on('submit', function (event) { //event listener - 
   }).done(function() { // server has nothing to send bakc - blank page
       loadTweets(); // promises
   });
+
+
+   $("#configForm").trigger('reset');
+  $(".counter").text(140);
+
+
+
 });
 
 
