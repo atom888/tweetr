@@ -9,10 +9,58 @@
   z-index: 10;
 }
 
+#nav-bar #compose {
+  background-color: #e7fdff;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: #2ea896;
+  display: inline-block;
+  float: right;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+  line-height: 40px;
+  margin-top: 15px;
+}
+
+
+#nav-bar #compose:hover {
+  background-color: #ffffff;
+  color:  black;
+}
+
+#nav-bar i {
+  margin: 0 2px;
+}
+
 #nav-bar .logo {
   float: left;
   height: 80px;
   width: 80px;
+}
+
+
+#nav-bar .logo:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 #nav-bar .header {

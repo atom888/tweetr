@@ -3,6 +3,9 @@
 const User    = require("../lib/user-helper")
 const express = require('express');
 const tweets  = express.Router();
+const moment = require('moment');
+
+moment().format();
 
 module.exports = function(db) {
 

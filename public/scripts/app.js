@@ -5,6 +5,14 @@
  */
 $(document).ready(function() {
 
+$(".new-tweet").hide();
+
+$('#compose').click(function() {
+  $('.new-tweet').slideToggle( "slow", function() {
+  });
+   $("#content_txt").focus();
+})
+
 
 
 function escape(str) {
@@ -35,6 +43,8 @@ function createTweetElement (tweet) {
 
   var presentDate = $.now();
   var newDate = new Date(epoch);
+  // var relativeTime = moment().format('LL');
+  // console.log(relativeTime);
 
   tweet =
   $(`<article>
@@ -84,7 +94,7 @@ $('form[action="/tweets/"]').on('submit', function (event) { //event listener - 
   });
 
 
-   $("#configForm").trigger('reset');
+  $("#configForm").trigger('reset');
   $(".counter").text(140);
 
 
