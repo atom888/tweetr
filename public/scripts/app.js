@@ -43,8 +43,8 @@ function createTweetElement (tweet) {
 
   var presentDate = $.now();
   var newDate = new Date(epoch);
-  // var relativeTime = moment().format('LL');
-  // console.log(relativeTime);
+  var relativeTime = moment(newDate).fromNow();
+  // console.log("relativeTime", relativeTime);
 
   tweet =
   $(`<article>
@@ -55,7 +55,7 @@ function createTweetElement (tweet) {
           </header>
           <p class="content">${escape(content)}</p>
           <footer>
-            <p class="date">${newDate}
+            <p class="date">${relativeTime}
               <i class="fa fa-flag" aria-hidden="true"></i>
               <i class="fa fa-retweet" aria-hidden="true"></i>
               <i class="fa fa-heart" aria-hidden="true"></i>

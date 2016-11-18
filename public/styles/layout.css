@@ -16,7 +16,6 @@ html {
 
 body {
   margin: 0;
-  /*color: #E6DEDC;*/
   background-color: #ededed;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -25,7 +24,7 @@ body {
 
 main {
   background-color: #fff;
-  height: 800px;
+  height: 100%;
   margin: 0 auto;
   margin-top: 80px;
   padding-top: 140px;
@@ -33,17 +32,16 @@ main {
 }
 
 #tweet-container {
-  background-color: #f3f3f3;
-  border: solid 1px #cecece;
   border-radius: 10px;
-  /*margin-bottom: 15px;*/
   margin-top: 15px;
 }
 
 #tweet-container article {
   background-color: #ffffff;
   border-radius: 10px;
+  border: solid 1px #cecece;
   color: #647e84;
+  margin-bottom: 15px;
   opacity: 0.7;
 }
 
@@ -55,8 +53,9 @@ main {
 }
 
 #tweet-container article p {
-  margin-left: 10px;
+  margin: 0px 10px;
   padding: 20px 0px;
+  word-wrap: break-word;
 }
 
 
