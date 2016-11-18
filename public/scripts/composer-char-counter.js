@@ -9,15 +9,13 @@ $(document).ready(function() {
   $("#content_txt").on("input", function(element) {
     var lengthValue = $(this).val().length;
     var countReduce = maxValue - lengthValue;
-    console.log("lengthValue", lengthValue)
-//Calling upon the counter class by traversing the DOM to find the class node
     var counterElement = $(this).parent().find(".counter");
 
     counterElement.text(countReduce);
     counterElement.css('color', countReduce < 0 ? 'red' : '');
 
 
-    });
+  });
 });
 
 
