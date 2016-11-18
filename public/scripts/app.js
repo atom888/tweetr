@@ -11,7 +11,7 @@ $('#compose').click(function() {
   $('.new-tweet').slideToggle( "slow", function() {
   });
    $("#content_txt").focus();
-})
+});
 
 
 
@@ -19,7 +19,7 @@ function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 function renderTweets(tweets) { // need to redirect to lib / tweets.json
   var container = $('#tweet-container').html(''); //Jquery dom element - html('') wipes out all html with an empty string
