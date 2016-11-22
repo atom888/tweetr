@@ -81,13 +81,11 @@ $(document).ready(function() {
     var tweetLength = tweetInput.find("#content_txt").val().length;
     var maxTweetLength = 140;
 
-    console.log("tweetLength", tweetLength);
-
     if (tweetLength === 0) {
       alert("Please enter a tweet before submitting.");
       return false;
     }
-    if (tweetLength >= maxTweetLength) {
+    if (tweetLength > maxTweetLength) {
       alert("Tweet is too long!");
       return false;
     }
